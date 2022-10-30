@@ -9,3 +9,11 @@ The dataset comes from an IBM development platform for a fictitious phone/intern
 ## Exploratory Data Analysis
 
 When looking at the data, some of the relationships which can be determined are:
+Customers with no online security or backup, no device protection, and no tech support are from two to three times more likely to churn. Customers with month-to-month contracts are almost four times more likely to churn than customers with yearly contracts. Two-year contractors are very unlikely to churn.
+
+## Modeling
+I first used a Logistic Regression model using Scikit-Learn. I then built a Random Forest Classifier model, which had slightly better recall than Logistic regression but had less precision and less accuracy than the Logistic Regression model.
+I used a Grid search CV to find the optimal parameters for the Random Forest Model. After putting in the new parameters I was able to increase the accuracy of the Random Forest Model. 
+
+## Final Results
+Even though hyper tuning increased the Random Forest Model slightly, the logistic regression model still performed better and is the model I would use.
